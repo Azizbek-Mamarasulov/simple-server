@@ -17,7 +17,7 @@ app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 const httpsServer = https.createServer(
   {
     key: readFileSync("./crt/server-key.pem"),
-    cer: readFileSync("./crt/server-cert.pem"),
+    cert: readFileSync("./crt/server-cert.pem"),
   },
   app
 );
